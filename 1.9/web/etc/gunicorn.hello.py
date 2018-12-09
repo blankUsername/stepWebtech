@@ -1,5 +1,5 @@
 workers = 3
-bind = '0.0.0.0:8080'
+bind = '0.0.0.0:8000'
 pidfile = '/var/run/gunicorn/hello.pid'
 user = 'www-data'
 daemon = True
