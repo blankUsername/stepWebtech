@@ -1,8 +1,7 @@
 def app(environ, start_response):
-   #data = b"Hello, World!\n"
+   d = "\n".join(environ['QUERY_STRING'].split('&'))
    start_response("200 OK", [
        ("Content-Type", "text/plain")#,
-       #("Content-Length", str(len(data))
+       ("Content-Length", str(len(data))
    ])
-   #return iter([data])
-   return [ "\n".join(environ['QUERY_STRING'].split('&'))]
+   return iter([data.encode('utf-8')])
