@@ -7,4 +7,4 @@ sudo mkdir /var/run/gunicorn && chmod a+x+w /var/run/gunicorn
 sudo mkdir /var/log/gunicorn && chmod a+x+w /var/log/gunicorn
 sudo /etc/init.d/nginx restart
 sudo gunicorn -c /etc/gunicorn.d/hello.py  hello:app
-sudo gunicorn -c /etc/gunicorn.d/ask.py  ask:app
+sudo gunicorn -c /etc/gunicorn.d/ask.py  ask.ask.wsgi:application
